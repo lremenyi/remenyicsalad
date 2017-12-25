@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+@import "../calendar/css/fullcalendar.css";
+
+.fc-event {
+    cursor: pointer;
+}
+
+.fc-time{
+   display: none !important;
+}
+
+.modal-body {
+    padding: 30px;
+}
+
+.modal-body .row .col-md-6 {
+    padding-left: 20px;
+}
+
+input:disabled:not([type="submit"]) {
+    cursor: default !important;
+    background-color: transparent !important;
+}
+
+input[type="submit"]:disabled#save-event {
+    color: rgba(255, 255, 255, 0.84) !important;
+}
+
+#called-event {
+    display: none;
+}
+

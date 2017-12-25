@@ -1,0 +1,152 @@
+@charset "UTF-8";
+
+a.mini-stat {
+    display: block;
+    color: black;
+}
+
+.mini-stat {
+    background: #fff;
+    padding: 20px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    margin-bottom: 20px;
+}
+
+.mini-stat-icon {
+    width: 60px;
+    height: 60px;
+    display: inline-block;
+    line-height: 60px;
+    text-align: center;
+    font-size: 30px;
+    background: #eee;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+    float: left;
+    margin-right: 10px;
+    color: #fff;
+}
+
+.orange {
+    background-color: #fa8564 !important;
+}
+
+.tar {
+    background-color: #1fb5ac !important;
+}
+
+.purple {
+    background-color: #a48ad4 !important; 
+}
+
+.green {
+    background-color: #aec785 !important
+}
+
+.mini-stat-info {
+    font-size: 12px;
+    padding-top: 2px;
+}
+
+.mini-stat-info span {
+    display: block;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.event-list a {
+    color: #333;
+}
+
+.event-list h1 {
+    font-size: 24px;
+}
+
+.event-list i {
+    display: block;
+    font-size: 150px;
+    text-align: center;
+    padding: 20px;
+    color: white;
+    width: 200px;
+    margin: auto;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+}
+
+.event-list span.event-title {
+    display: block;
+    text-align: center;
+    font-size: 25px;
+    margin-top: 10px;
+}
+
+.event-list span.host-name {
+    display: block;
+    text-align: center;
+}
+
+.event-list span.when-date {
+    display: block;
+    text-align: center;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.gallery-list h1 {
+    font-size: 24px;
+}
+
+.gallery-list a {
+    position: relative;
+    display: block;
+    padding: 15px;
+}
+
+.gallery-list img {
+    position: relative;
+    display: box;
+    width: 100%;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+}
+
+.gallery-list div.gallery-title {
+    color: #333;
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 40px;
+    font-size: 16px;
+    text-align: center;
+    margin-top: -38px;
+    padding: 10px;
+    -webkit-border-bottom-right-radius: 10px;
+    -webkit-border-bottom-left-radius: 10px;
+    -moz-border-radius-bottomright: 10px;
+    -moz-border-radius-bottomleft: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-color: rgba(255,255,255, .85);
+}
+
+.image-list h1 {
+    font-size: 24px;
+}
+
+.image-list a {
+    display: block;
+    padding: 15px;
+}
+
+.image-list img {
+    width: 100%;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+}

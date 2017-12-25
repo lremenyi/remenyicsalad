@@ -1,0 +1,42 @@
+#######################
+# Start rewrite engine #
+########################
+
+RewriteEngine On
+
+#########################################
+# Ignore local files, folders and links #
+#########################################
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-l
+
+################################
+# Redirects to the error pages #
+################################
+
+ErrorDocument 400 /error/errorcode/400
+ErrorDocument 403 /error/errorcode/403
+ErrorDocument 404 /error/errorcode/404
+ErrorDocument 500 /error/errorcode/500
+
+###################################
+# Deny all files except index.php #
+###################################
+<Files *.php>
+    Order Deny,Allow
+    Deny from all
+    Allow from 127.0.0.1
+</Files>
+
+<Files index.php>
+    Order Allow,Deny
+    Allow from all
+</Files>
+
+####################
+# Pass URL rewrite #
+####################
+
+RewriteRule ^(.*) index.php?url=$1 [QSA,L]

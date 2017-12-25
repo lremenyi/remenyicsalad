@@ -1,0 +1,44 @@
+@charset "UTF-8";
+
+html,body {
+    height: 100%;
+    position: relative;
+}
+
+body {
+    background-color: #F5F5F5;
+}
+
+.login-panel {
+    position: absolute;
+    top: 50%;
+    margin-top: -195px;
+}
+
+@media(max-height: 420px) {
+    .login-panel {
+        top: 0px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+}
+
+.white {
+    background-color: white;
+}
+
+.panel {
+    box-shadow: 0 2px 5px rgba(0,0,0,.26);
+    -webkit-box-shadow: 0 2px 5px rgba(0,0,0,.26);
+    -moz-box-shadow: 0 2px 5px rgba(0,0,0,.26);
+}
+
+.login-panel > .panel-body {
+    padding-top: 40px;
+}
+
+.login-logo {
+    display: block;
+    margin: auto;
+    width: 150px;
+}

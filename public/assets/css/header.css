@@ -1,0 +1,323 @@
+@charset "UTF-8";
+
+#container {
+    height: 100%;
+}
+
+.navbar {
+    z-index: 1030;
+}
+
+.brand {
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    display: inline-block;
+    width: 250px;
+    height: 60px;
+    background-color: #0D47A1;
+    overflow: hidden;
+}
+
+@media (max-width: 960px) {
+    .brand {
+        margin-left: -250px;
+    }
+}
+
+.brand.only-logo {
+    width: 80px;
+    overflow: hidden;
+}
+
+.brand-logo {
+    margin-left: 10px;
+    margin-right: 10px;
+    display: inline-block;
+    width: 60px;
+    padding: 10px;
+}
+
+.brand-title {
+    margin-left: 10px;
+    font-size: 18px;
+    color: white;
+    display: inline-block;
+}
+
+.sidebar-toggle {
+    margin-bottom: 0px;
+}
+
+@media(min-width: 961px) {
+    .sidebar-collapse-small-res {
+        display: none;
+    }
+}
+
+@media(max-width: 960px) {
+    .sidebar-collapse {
+        display: none;
+    }
+    .sidebar-collapse-small-res {
+        display: block;
+    }
+}
+
+.sidebar-toggle li {
+    cursor: pointer;
+}
+
+.sidebar-toggle li i {
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    color: rgba(255,255,255,.8);
+    line-height: 60px;
+    font-size: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-left: 1px solid rgba(0,0,0,.1);
+    border-right: 1px solid rgba(0,0,0,.1);
+}
+
+.sidebar-toggle li i.small {
+    -ms-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.sidebar-toggle li:hover i{
+    color: white;
+}
+
+.sidebar-collapse-small-res li i {
+    border: none;
+}
+
+.right-navigation {
+    margin-bottom: 0px;
+}
+
+.right-navigation li {
+    margin-top: 10px;
+}
+
+.right-navigation > li > a {
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    color: rgba(255,255,255,.7);
+}
+
+.right-navigation li a:hover {
+    color: white;
+}
+
+.nav-profile {
+    font-size: 14px;
+    margin-left: 10px;
+    margin-right: 20px;
+}
+
+.nav-profile > a > span {
+    font-family: Roboto-Thin;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-left: 5px;
+}
+
+.nav-profile > a > span > i {
+    margin-left: 5px;
+}
+
+.nav-profile .dropdown-menu {
+    width: 190px;
+    top: 45px;
+    left: auto;
+    right: -10px;
+    padding: 0px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+}
+
+.nav-profile .dropdown-menu:before,
+.nav-profile .dropdown-menu:after {
+    left: auto;
+    right: 10px;
+    bottom: 100%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    margin-bottom: 0px;
+}
+
+.nav-profile .dropdown-menu:before {
+    border-color: rgba(250,250,250,0);
+    border-bottom-color: transparent;
+    border-width: 12px;
+    margin-left: -12px;
+}
+
+.nav-profile .dropdown-menu:after {
+    border-color: rgba(255,255,255,0);
+    border-bottom-color: #0D47A1;
+    border-width: 11px;
+    margin-left: -11px;
+}
+
+.nav-profile .dropdown-menu li {
+    margin-top: 0;
+}
+
+.nav-profile .dropdown-menu li.dropdown-header {
+    padding: 0 0 0 5px;
+    background-color: #0D47A1;
+    color: white;
+}
+
+.nav-profile .dropdown-menu li.dropdown-header span {
+    display: block;
+    padding: 10px;
+    font-size: 16px;
+    letter-spacing: 2px;
+    font-family: Roboto-Thin;
+    font-weight: bold;
+}
+
+.nav-profile .dropdown-menu a,
+.nav-profile .dropdown-menu a:hover{
+    padding: 15px;
+    color: #333;
+}
+
+.nav-profile .dropdown-menu a:hover i {
+    color: #1976D2;
+}
+
+.nav-profile .dropdown-menu a i {
+    margin-right: 10px;
+}
+
+.logout {
+    border-top: 1px solid #eaeaea;
+}
+
+.size-40x40 {
+    width: 40px;
+    height: 40px;
+}
+
+
+#sidebar {
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    margin-left: 0px;
+    width: 250px;
+    height: 100%;
+    position: fixed;
+    z-index: 1025;
+    background-color: #32323a;
+}
+
+@media(max-width: 960px) {
+    #sidebar {
+        margin-left: -250px;
+    }
+    #sidebar.sidebar-small {
+        margin-left: -80px;
+    }
+    #sidebar.show-sidebar {
+        margin-left: 0px !important;
+    }
+}
+
+#sidebar.sidebar-small {
+    width: 80px;
+}
+
+.leftside-navigation {
+    height: 100%;
+}
+
+.menu-list {
+    padding-top: 60px;
+    margin-bottom: 0px;
+}
+
+.menu-list li a {
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    font-family: Roboto-Thin;
+    display: block;
+    width: 100%;
+    padding: 15px 10px 15px 30px;
+    color: #aeb2b7;
+    font-size: 14px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.menu-list li a:hover, 
+.menu-list li a.active {
+    background-color: #28282e;
+    color: #64B5F6;
+}
+
+.menu-list li a i {
+    margin-right: 10px;
+}
+
+.sidebar-small .menu-list li a {
+    padding: 10px 0 10px 0;
+}
+
+.sidebar-small .menu-list li a i {
+    display: block;
+    margin-right: 0px;
+    font-size: 35px;
+    text-align: center;
+}
+
+.sidebar-small .menu-list li a span {
+    display: block;
+    font-size: 10px;
+    text-align: center;
+    margin-top: 5px;
+}
+
+#main-content {
+    margin-left: 250px;
+    min-height: 100%;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+}
+
+@media(max-width: 960px) {
+    #main-content {
+        margin-left: 0px!important;
+    }
+}
+
+#main-content.main-expanded {
+    margin-left: 80px;
+}
+
+.wrapper {
+    display: inline-block;
+    margin-top: 60px;
+    padding: 15px;
+    width: 100%;
+}

@@ -26,7 +26,7 @@ jobs:
           command: 'sed -i "s/dbpass.*/${DB_PASS}/" environments/prod.env.ini'
       - run:
           name: Deploy files to deploy server
-          command: 'lftp -u ${FTP_USER},${FTP_PASS} -e "mirror -R;quit" ${FTP_HOST}'
+          command: 'lftp -u ${FTP_USER},${FTP_PASS} -e "set ftp:ssl-allow no;mirror -R;quit" ${FTP_HOST}'
 
 workflows:
   version: 2

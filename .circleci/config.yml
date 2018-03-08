@@ -26,7 +26,7 @@ jobs:
           command: 'sed -i "s/dbpass.*/${DB_PASS}/" environments/prod.env.ini'
       - run:
           name: Deploy files to deploy server
-          command: 'lftp -u ${FTP_USER},${FTP_PASS} -e "set ftp:ssl-allow no; set ftp:sync-mode off;mirror -R --exclude .git/ --exclude .circleci/ --exclude LICENSE --exclude .gitignore --exclude .idea/ --delete;quit" ${FTP_HOST}'
+          command: 'lftp -u ${FTP_USER},${FTP_PASS} -e "set ftp:ssl-allow no; set ftp:sync-mode off;mirror -R --exclude .git/ --exclude .circleci/ --exclude LICENSE --exclude .gitignore --exclude .idea/;quit" ${FTP_HOST}'
 
 workflows:
   version: 2

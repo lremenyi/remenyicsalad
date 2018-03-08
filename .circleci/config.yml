@@ -1,0 +1,35 @@
+version: 2
+jobs:
+  deploy:
+    working_directory: ~/mern-starter
+    docker:
+      - image: circleci/php
+    steps:
+      - checkout
+      - run
+          name: Installing required packages
+          command: 'sudo apt-get update && sudo apt-get upgrade && sudo apt-get install lftp'
+      - run:
+          name: Creating prod environment file
+          command: 'cp environments/prod-template.env.ini environments/prod.env.ini'
+      - run:
+          name: Setting dbhost configuration
+          command: 'sed -i "s/dbhost.*/${DB_HOST}/" environments/prod.env.ini'
+      - run:
+          name: Setting dbname configuration
+          command: 'sed -i "s/dbname.*/${DB_NAME}/" environments/prod.env.ini'
+      - run:
+          name: Setting dbuser configuration
+          command: 'sed -i "s/dbuser.*/${DB_USER}/" environments/prod.env.ini'
+      - run:
+          name: Setting dbpass configuration
+          command: 'sed -i "s/dbpass.*/${DB_PASS}/" environments/prod.env.ini'
+      - run:
+          name: Deploy files to deploy server
+          command: 'lftp -u {FTP_USER},{FTP_PASS} -e "mirror -R;quit" {FTP_HOST}'
+
+workflows:
+  version: 2
+  build:
+    jobs:
+      - deploy

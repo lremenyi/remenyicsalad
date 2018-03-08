@@ -13,12 +13,23 @@
 class sqlConfig{
 	
     private $params = array(
-	'host' => 'localhost',
-	'dbName' => 'remenyi_remenyinet',
-	'loginName' => 'remenyi_user',
-	'loginPass' => 'eempHdKwxq586vZ4'
+        'host' => '',
+        'dbName' => '',
+        'loginName' => '',
+        'loginPass' => ''
     );
-		
+
+    public function __construct() {
+        $environment = parse_ini_file(ROOT . DS . 'environments' . DS . 'prod.env.ini');
+
+        if($environment) {
+            $this->params['host'] = $environment['db_host'];
+            $this->params['dbName'] = $environment['db_name'];
+            $this->params['loginName'] = $environment['db_user'];
+            $this->params['loginPass'] = $environment['db_pass'];
+        }
+    }
+
     /**
      * Magic set function
      * 
@@ -35,6 +46,7 @@ class sqlConfig{
      * Magic get function
      * 
      * @param string $name  Array index
+     * @return string   Config param
     */
     function __get($name){
         

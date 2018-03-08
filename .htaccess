@@ -21,9 +21,9 @@ ErrorDocument 403 /error/errorcode/403
 ErrorDocument 404 /error/errorcode/404
 ErrorDocument 500 /error/errorcode/500
 
-###################################
-# Deny all files except index.php #
-###################################
+###################################################
+# Deny all files except index.php and the Lot.php #
+###################################################
 <Files *.php>
     Order Deny,Allow
     Deny from all
@@ -31,6 +31,11 @@ ErrorDocument 500 /error/errorcode/500
 </Files>
 
 <Files index.php>
+    Order Allow,Deny
+    Allow from all
+</Files>
+
+<Files library/Lot.php>
     Order Allow,Deny
     Allow from all
 </Files>

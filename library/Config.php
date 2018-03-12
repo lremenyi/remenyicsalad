@@ -89,7 +89,7 @@ class Config {
                 $name = 'November';
             break;
             case 12:
-                $name = 'Decembre';
+                $name = 'December';
             break;
         }
         

@@ -30,7 +30,8 @@ class Router {
 		
         // Set the default controller for HomeController
         if(!User::userLoginCheck()) {
-            $redirect_url = $_GET['url'];
+
+            $redirect_url = isset($_GET['url']) ? $_GET['url'] : NULL;
             $this->setController('User','login',$redirect_url);
         }
         else {
